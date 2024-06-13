@@ -3,6 +3,7 @@ from django.urls import include,path
 from inicio.views import myHomeView
 from inicio.views import anotherView
 from personas.views import pruebaView
+from personas.views import prueba2View
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -10,4 +11,5 @@ urlpatterns = [
     path('', myHomeView, name = "Pagina de Inicio"),
     path('another/', anotherView),
     path('pruebaTags/', pruebaView),
+    path('pruebaTags2/', prueba2View),
 ]
