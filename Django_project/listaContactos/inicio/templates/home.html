@@ -15,5 +15,10 @@
             <li> {{usuario.nombres}}</li>
         </ul>
         {% endfor%}
+        {% for usuario in personasRegistradas %}
+        <ol>
+            <li> {{usuario.nombres}} / su signo es {{usuario.signo}}  </li>
+        </ol>
+        {% endfor%}
     </body>
 </html>
