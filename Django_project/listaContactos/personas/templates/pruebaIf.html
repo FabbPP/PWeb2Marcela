@@ -28,6 +28,29 @@
                     {% endif%}
                 {% endfor %}
             </ul> 
+            <br> </br>
+            <li> <strong>Operador != </strong></li>
+            <h2> Elementos de frutas (no elementos de verduras)</h2>
+            <ul>
+                {% for categoria in categorias %}
+                    {% if categoria.nombre != 'Verduras' %}
+                        {% for item in categoria.items %}
+                            <li> {{forloop.counter}} .- {{item}} </li>
+                        {% endfor %}
+                    {% endif%}
+                {% endfor %}
+            </ul> 
+            <br> </br>
+            <li> <strong>Operador > </strong></li>
+            <h2> Menores de 20 años en usuarios</h2>
+            <ul>
+                {% for persona in personasRegistradas %}
+                    {% if 20 > persona.edad %}
+                        <li> {{forloop.counter}} .- {{persona.nombres}} {{persona.edad}}</li>
+                    {% endif%}
+                {% endfor %}
+            </ul> 
+
         </ol>
     </body>
 </html>
