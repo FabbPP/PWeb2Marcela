@@ -50,6 +50,16 @@
                     {% endif%}
                 {% endfor %}
             </ul> 
+            <br> </br>
+            <li> <strong>Operador < </strong></li>
+            <h2> Personas adultas mayores</h2>
+            <ul>
+                {% for persona in personasRegistradas %}
+                    {% if 22 < persona.edad %}
+                        <li> {{forloop.counter}} .- {{persona.nombres}} {{persona.edad}}</li>
+                    {% endif%}
+                {% endfor %}
+            </ul> 
 
         </ol>
     </body>
