@@ -16,9 +16,9 @@
         </ul>
         {% endfor%}
         {% for usuario in personasRegistradas %}
-        <ol>
-            <li> {{usuario.nombres}} / su signo es {{usuario.signo}}  </li>
-        </ol>
+        <ul>
+            <li> {{forloop.counter}}.- {{usuario.nombres}} / su signo es {{usuario.signo}}  </li>
+        </ul>
         {% endfor%}
     </body>
 </html>
