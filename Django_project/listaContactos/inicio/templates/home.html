@@ -17,7 +17,10 @@
         {% endfor%}
         {% for usuario in personasRegistradas %}
         <ul>
-            <li> {{forloop.revcounter}}.- {{usuario.nombres}} / su signo es {{usuario.signo}}</li>
+            <li> {{forloop.counter}}.- {{usuario.nombres}} / su signo es {{usuario.signo}}</li>
+            {% if forloop.first %} (Primero registrado) {% endif %}
+            {% if forloop.last %} (Ultimo en registrarse) {% endif %}
+            
         </ul>
         {% endfor%}
     </body>
