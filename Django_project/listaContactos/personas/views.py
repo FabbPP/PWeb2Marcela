@@ -16,5 +16,21 @@ def prueba2View(request):
     'personasRegistradas': personasRegistradas,
     }
     return render(request,"base.html",context)
-
+def expOperadoresIf(request):
+    categorias = [
+        {
+            'nombre': 'Frutas',
+            'items': ['Manzana', 'Banana', 'Naranja']
+        },
+        {
+            'nombre': 'Verduras',
+            'items': ['Lechuga', 'Tomate', 'Zanahoria']
+        }
+        
+    ]
+    context = {
+        'categorias': categorias,
+        'personasRegistradas': personasRegistradas,
+    }
+    return render(request,"pruebaIf.html",context)
     

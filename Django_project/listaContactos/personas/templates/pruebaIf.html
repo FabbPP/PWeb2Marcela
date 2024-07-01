@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title> Prueba de operadores de tags if en django</title>
+    </head>
+    <body>
+        <h1> Pruebas con los operadores de if </h1>
+        <ol>
+            <li> <strong>Operador == </strong></li>
+            <h2> Elementos de Verduras</h2>
+            <ul>
+                {% for categoria in categorias %}
+                    {% if categoria.nombre == 'Verduras' %}
+                        {% for item in categoria.items %}
+                            <li> {{forloop.counter}} .- {{item}} </li>
+                        {% endfor %}
+                    {% endif%}
+                {% endfor %}
+                <li></li>
+            </ul>
+            
+        </ol>
+    </body>
+</html>
