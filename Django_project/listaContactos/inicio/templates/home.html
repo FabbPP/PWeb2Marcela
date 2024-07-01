@@ -15,11 +15,12 @@
             <li> {{usuario.nombres}}</li>
         </ul>
         {% endfor%}
+        <h1> Lista de personas de signo aries </h1>
         {% for usuario in personasRegistradas %}
         <ul>
-            <li> {{forloop.counter}}.- {{usuario.nombres}} / su signo es {{usuario.signo}}</li>
-            {% if forloop.first %} (Primero registrado) {% endif %}
-            {% if forloop.last %} (Ultimo en registrarse) {% endif %}
+            {% if usuario.signo == "Aries" %} 
+            <li> {{forloop.counter}}.- {{usuario.nombres}}</li>
+            {% endif %}
             
         </ul>
         {% endfor%}
