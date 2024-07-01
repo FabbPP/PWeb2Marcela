@@ -3,11 +3,17 @@
     <head>
         <title>Template Base</title>
     </head>
+    
     <body>
         <h1>Hola mundo desde Django</h1>
-        <h2>con Templates</h2>
+        <h2>con Templates. Esta es una prueba usando templates y contexto en el view</h2>
         {{request.user}}
         <br>
         {{request.user.is_authenticated}}
+        {% for usuario in personasRegistradas %}
+        <ul>
+            <li> {{usuario.nombres}}</li>
+        </ul>
+        {% endfor%}
     </body>
 </html>
