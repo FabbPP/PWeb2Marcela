@@ -4,11 +4,15 @@
     </head>
     <body>
         <h1> Pruebas con filtros a las variables de django </h1>
-        <br> </br>
+        
         <ol>
             <li><h2>  <strong>Filter Upper</strong> </h2></li>
-            <p1> Convierte una cadena de texto a mayúsculas - hello world</'1'>
+            <p1> Convierte una cadena de texto a mayúsculas - hello world</p1>
             <h3> {{ "hello world" | upper }} </h3>
+            <br> </br>
+            <li><h2>  <strong>Filter Lower</strong> </h2></li>
+            <p1> Convierte una cadena de texto a minúsculas. - HELLO WORLD</p1>
+            <h3> {{ "HELLO WORLD" | lower }} </h3>
         </ol>
     </body>
 </html>
