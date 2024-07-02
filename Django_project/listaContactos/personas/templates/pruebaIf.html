@@ -71,15 +71,15 @@
                 {% endfor %}
             </ul> 
             <br> </br>
-            <li> <strong>Operador in </strong></li>
-            <h2> Lista de personas con edad de nombre Paz</h2>
+            <li><strong>Operador not in</strong></li>
+            <h2>Lista de personas que no se llaman Paz</h2>
             <ul>
                 {% for persona in personasRegistradas %}
-                    {% if 22 < persona.edad %}
-                        <li> {{forloop.counter}} .- {{persona.nombres}} {{persona.edad}}</li>
-                    {% endif%}
+                    {% if "Paz" not in persona.nombres %}
+                        <li>{{ forloop.counter }} .- {{ persona.nombres }} {{ persona.edad }}</li>
+                    {% endif %}
                 {% endfor %}
-            </ul> 
+            </ul>
 
         </ol>
     </body>
