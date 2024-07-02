@@ -17,6 +17,10 @@
             <li><h2>  <strong>Filter Length</strong> </h2></li>
             <p1> Devuelve la longitud de una lista o cadena. - Hello world</p1>
             <h3> {{ "HELLO WORLD" | length}} </h3>
+            <br> </br>
+            <li><h2>  <strong>Filter Safe</strong> </h2></li>
+            <p1> Marca una cadena de texto como segura para renderizar HTML- Hello world</p1>
+            <h3> {{ "<strong>hello</strong>" | safe }} </h3>
         </ol>
     </body>
 </html>
