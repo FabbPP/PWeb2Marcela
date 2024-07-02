@@ -80,6 +80,18 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+            <br> </br>
+            <li><strong>Operador is</strong></li>
+            <h2>Verificar si una persona es la misma que otra</h2>
+            <ul>
+                {% for persona in personasRegistradas %}
+                    {% if persona is persona_especifica %}
+                        <li>{{ forloop.counter }} .- {{ persona.nombres }} es la persona especifica</li>
+                    {% else %}
+                        <li>{{ forloop.counter }} .- {{ persona.nombres }} no es la persona especifica</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
 
         </ol>
     </body>
