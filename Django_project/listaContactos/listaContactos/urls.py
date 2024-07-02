@@ -6,7 +6,7 @@ from personas.views import pruebaView
 from personas.views import prueba2View
 from personas.views import expOperadoresIf
 from personas.views import filtersView
-
+from personas.views import personasTestView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('personas/', include('personas.urls')),
@@ -16,4 +16,5 @@ urlpatterns = [
     path('pruebaTags2/', prueba2View),
     path ('pruebaIf/', expOperadoresIf) ,
     path ('pruebaFilters/', filtersView) ,
+    path ('persona/', personasTestView)
 ]

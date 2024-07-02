@@ -35,4 +35,12 @@ def expOperadoresIf(request):
     return render(request,"pruebaIf.html",context)
 def filtersView (request):
     return render (request,"pruebaFilters.html",{})
+def personasTestView (request):
+    obj = Persona.objects.get(id = 1)
+    context = {
+        "nombres": obj.nombres,
+        "apellidos": obj.apellidos,
+        "edad": obj.edad,
+    }
+    return render (request,"persona.html", context)
     
