@@ -60,6 +60,26 @@
                     {% endif%}
                 {% endfor %}
             </ul> 
+            <br> </br>
+            <li> <strong>Operador in </strong></li>
+            <h2> Lista de personas con edad de nombre Paz</h2>
+            <ul>
+                {% for persona in personasRegistradas %}
+                    {% if 22 < persona.edad %}
+                        <li> {{forloop.counter}} .- {{persona.nombres}} {{persona.edad}}</li>
+                    {% endif%}
+                {% endfor %}
+            </ul> 
+            <br> </br>
+            <li> <strong>Operador in </strong></li>
+            <h2> Lista de personas con edad de nombre Paz</h2>
+            <ul>
+                {% for persona in personasRegistradas %}
+                    {% if 22 < persona.edad %}
+                        <li> {{forloop.counter}} .- {{persona.nombres}} {{persona.edad}}</li>
+                    {% endif%}
+                {% endfor %}
+            </ul> 
 
         </ol>
     </body>
