@@ -33,4 +33,6 @@ def expOperadoresIf(request):
         'personasRegistradas': personasRegistradas,
     }
     return render(request,"pruebaIf.html",context)
+def filtersView (request):
+    return render (request,"pruebaFilters.html",{})
     
