@@ -16,5 +16,6 @@ class RawPersonaForm(forms.Form):
     nombres : form.CharField()
     apellidos : form.CharField()
     edad : form.IntegerField()
+    signo : form.CharField()
+    donador : form.BooleanField()
 
-    
