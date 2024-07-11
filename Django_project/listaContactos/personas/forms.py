@@ -11,3 +11,10 @@ class PersonaForm(forms.ModelForm):
             "signo",
             "donador"
         ]
+#forms objeto#
+class RawPersonaForm(forms.Form):
+    nombres : form.CharField()
+    apellidos : form.CharField()
+    edad : form.IntegerField()
+
+    
