@@ -54,7 +54,7 @@ def personasFormView (request):
     }
     return render (request,"personas/formPersona.html", context)
 def personasFormObjectView(request):
-    form = RawPersonaForm()
+    form = RawPersonaForm(request.POST)
     context = {
         "form" : form
     }
