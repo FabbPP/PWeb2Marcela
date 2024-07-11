@@ -43,4 +43,12 @@ def personasTestView (request):
         "edad": obj.edad,
     }
     return render (request,"persona.html", context)
-    
+def personasFormView (request):
+    form = PersonaForm(request.POST or None)
+    if (form.is_valid()):
+        form.save()
+        form = PersonaForm()
+    context = {
+        "form" : form
+    }
+    render (request,./personas/"formPersona.html", context)
