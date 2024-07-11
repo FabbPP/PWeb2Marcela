@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Persona
+from .forms.py import PersonaForm, RawPersonasForm
 
 def index(request):
     return HttpResponse("Hello, world. You're at the personas index.")
@@ -52,3 +53,9 @@ def personasFormView (request):
         "form" : form
     }
     render (request,./personas/"formPersona.html", context)
+def personasFormObjectView(request):
+    form = RawPersonasForm(request.POST or None):
+    context = {
+        "form" : form
+    }
+    render (request,"formPersona.html"context)
