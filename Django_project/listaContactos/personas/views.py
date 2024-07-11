@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from .models import Persona
 from .forms import PersonaForm, RawPersonaForm
@@ -54,8 +54,22 @@ def personasFormView (request):
     }
     return render (request,"personas/formPersona.html", context)
 def personasFormObjectView(request):
-    form = RawPersonaForm(request.POST)
-    context = {
+    if request.method == 'POST':
+        form = RawPersonaForm(request.POST)
+        if form.is_valid():
+            nombre = form.cleaned_data['nombres']  # Change 'nombre' to 'nombres'
+            apellidos = form.cleaned_data['apellidos']
+            edad = form.cleaned_data['edad']
+            signo = form.cleaned_data['signo']
+            donador = form.cleaned_data.get('donador', False)  # Use .get to avoid KeyError
+
+            # Do something with the data, for example, save it to the database
+
+            return redirect('success_url')  # Redirect after POST
+
+    else:
+        form = RawPersonaForm()
+    context =  {
         "form" : form
     }
     return render (request,"personas/formPersona.html",context)
