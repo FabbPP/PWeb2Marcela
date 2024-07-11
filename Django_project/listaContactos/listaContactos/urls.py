@@ -17,4 +17,5 @@ urlpatterns = [
     path('pruebaIf/', expOperadoresIf),
     path('pruebaFilters/', filtersView),
     path('persona/', personasTestView),
+    path('personas/', include('personas.urls')),
 ]
