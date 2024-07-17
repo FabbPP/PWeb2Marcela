@@ -27,7 +27,7 @@ export class AppComponent {
     this.showHobbies = false;
     
   }
-  showhobbies() {
+  toggleHobbies() {
     this.showHobbies = !this.showHobbies;
   }
 }
