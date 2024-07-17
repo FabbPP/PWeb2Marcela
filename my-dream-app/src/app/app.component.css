@@ -11,3 +11,9 @@
     color : red;
     padding : 20px;
 }
+.button {
+    padding : 20px;
+    margin : 3px;
+    color : white;
+    background-color: rgb(12, 110, 78);
+}
