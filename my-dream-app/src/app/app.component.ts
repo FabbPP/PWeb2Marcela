@@ -15,7 +15,6 @@ export class AppComponent {
   email; // : String;
   webpage: string;
   hobbies: string[];
-  showHobbies: boolean = false;
 
   constructor(){
     this.name = "Sergio Danilo Hancco M.";
