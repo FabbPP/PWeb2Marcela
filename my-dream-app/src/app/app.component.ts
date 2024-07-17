@@ -12,28 +12,6 @@ import { HelloWorldComponent} from "./hello-world/hello-world.component";
 })
 
 export class AppComponent {
-  title = 'my-dream-app';
-  name : string;
-  email; // : String;
-  webpage: string;
-  hobbies: string[];
-  showHobbies : boolean;
-
-  constructor(){
-    console.log ("Constructor working ...");
-    this.name = "Sergio Danilo Hancco M.";
-    this.email = "shanccom@unsa.edu.pe";
-    this.webpage = "https//www.unsa.edu.pe";
-    this.hobbies = ["voley","musica","bailar"];
-    this.showHobbies = false;
-    
-  }
-  toggleHobbies() {
-    this.showHobbies = !this.showHobbies;
-  }
-  newHobby(hobby: HTMLInputElement) {
-    this.hobbies.push(hobby.value);
-    hobby.value = "";
-    return false;
-  }
+  user = ["Jaden", "Sergio", "Fabiana", "Aedo"];
+  activated = false; 
 }
