@@ -8,9 +8,23 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
   title = 'my-dream-app';
-  name = "Fabiana Pacheco P.";
-  email = "fpachecop@unsa.edu.pe";
-  webpage = "https://www.unsa.edu.pe";
+  name : string;
+  email; // : String;
+  webpage: string;
+  hobbies: string[];
+  showHobbies: boolean = false;
+
+  constructor(){
+    this.name = "Sergio Danilo Hancco M.";
+    this.email = "shanccom@unsa.edu.pe";
+    this.webpage = "https//www.unsa.edu.pe";
+    this.hobbies = ["voley","musica","bailar"];
+    
+  }
+  showhobbies() {
+    return true;
+  }
 }
